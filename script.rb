@@ -42,12 +42,12 @@ response["results"].each_with_index do |member,index|
   end
 
   timestamp = Time.now.to_i
-  filename = "#{name}_#{timestamp}"
+  filename = "#{name}_#{timestamp}_website"
 
   puts "3. Generating screenshot for #{url}"
   websiteoutput = `phantomjs screenshot.js #{url} #{state} #{filename}`
 
-  puts "4. Created #{filename}.png"
+  puts "4. Created #{filename}.jpg"
 
   count += 1
 

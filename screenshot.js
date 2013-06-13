@@ -35,7 +35,6 @@ page.open(address, function(status) {
           page.evaluate(function () {
 
               // get rid of some of the damn popups
-
               var cover = document.querySelector("#html-greyed-out");
               if (cover !== null) {
                   cover.style.display = "none";
@@ -49,7 +48,7 @@ page.open(address, function(status) {
           });
 
           window.setTimeout(function() {
-              page.render('screenshots/' + directory + '/' + filename + '.png');
+              page.render('screenshots/' + directory + '/' + filename + '.jpg');
               phantom.exit();
           }, 10000);
 
