@@ -12,7 +12,9 @@ class String
   end
 end
 
-response = HTTParty.get("http://congress.api.sunlightfoundation.com/legislators?per_page=all&apikey=9c1ebbe93f3c4e52827fe22270805466")
+SUNLIGHT_API_KEY = "XXXXXXXXXXXXXXXXXX"
+
+response = HTTParty.get("http://congress.api.sunlightfoundation.com/legislators?per_page=all&apikey=#{SUNLIGHT_API_KEY}")
 
 puts "Total: #{response['results'].length}"
 puts "==============="
